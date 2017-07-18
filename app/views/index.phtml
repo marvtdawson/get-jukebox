@@ -1,0 +1,12 @@
+{% extends "template/layout/homepagetemplate.phtml" %}
+{% block maincontent %}
+<div class="jumbotron-wrapper">
+    {% include 'template/layout/slideshows/slideshow.phtml' %}
+</div>
+<div class="row homepage-content-wrapper">
+    <div class="col-sm-4 col-md-4 home-page-bio">{{ bio }}</div>
+    <div class="col-sm-4 col-md-4 home-page-music">Artist Latest Music Project</div>
+    <div class="col-sm-4 col-md-4 home-page-video">Artist Latest Video Project</div>
+    <div class="col-sm-4 col-md-4 home-page-contact">Contact Artist</div>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+<form action="{{ processForm }}" method="post" class="ajax" name="{{ formName }}" >
+    <div class="cpan-input-wrapper">
+        <h3>ARTIST STYLE</h3>
+        <div class="form-field-para">You said your flow is more:  {{ artistflow }}</div>
+        <label>Redefined your flow: </label>
+        <input type="text" name="user-alternative-email" id="user-alternative-email" class="input-form-fields" value="">
+    </div>
+    <input type="hidden" name="csrf_token" value="{{ csrftoken }}" >
+    <input type="submit" name="{{ artistStyleSubmitButton }}" value="Update Flow" class="cpan-forms-submit-button" />
+</form>

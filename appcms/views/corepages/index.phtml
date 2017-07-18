@@ -1,0 +1,26 @@
+{% extends "template/layout/appcmscpaneltemplate.phtml" %}
+{% block cpanelcontent  %}
+<div id="cPanPages">
+    <h1> {{ pageTitle }}  </h1 >
+    <div class="breadcrumb-font"><a href="{{ indexpage }}"><< {{ breadcrumb_index }} Home</a></div>
+    <hr>
+    <div class="row">
+        <form action="{{ processPageSelection }}" method="post" class="edit-page-select" name="{{ pageSelectionFormName }}">
+            <label>Select Page: </label>
+            <select id="core-page" name="core-page"  class="input-form-fields">
+                <option selected="selected">Choose Page to Edit:</option>
+                {% for key, page in pageNames %}
+                <option value="{{ key }}"> {{ page }} </option>
+                {% endfor %}
+            </select>
+            <input type="hidden" name="csrf_token" value="{{ csrftoken }}" >
+            <input type="submit" value="Get Page" class="corepages-submit-button" name="corepages_SubmitBtn" id="corepages_SubmitBtn" />
+        </form>
+        <div id="gif-div"></div>
+    </div>
+    <hr>
+    <div class="row">
+        {% include '/corepages/editpages.phtml' %}
+    </div>
+</div>
+{% endblock %}

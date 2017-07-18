@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+{% include '/template/layout/pagehead.phtml' %}
+<body>
+    <div class="container-fluid">
+        <!-- start header -->
+        <div class="row">
+            <div class="mast-head-wrapper">
+                {% include 'template/layout/header.phtml' %}
+            </div>
+        </div>
+        <!-- start cpanel admin header -->
+        <div class="row">
+            <!--div class="admin-header">
+                {% include '/template/layout/cpanelheader.phtml' %}
+            </div-->
+        </div>
+
+        <!-- start cpanel page wrapper -->
+        <div class="row">
+            <div class="cpanel-page-wrapper">
+                <!-- start cpanel left menu -->
+                <div id="cpanel-menu">
+                    {% include '/template/layout/cpanelleftmenu.phtml' %}
+                </div>
+                <!--start cpanel main content -->
+                <div class="cpanProfileWrapper">
+                    <section>
+                        {% block cpanelcontent %}
+                        {% endblock %}
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- push / clear footer -->
+        <div class="row push_footer_down"></div>
+        <!-- start footer -->
+        <div class="row">
+            <div class="col-lg footer-wrapper">
+                {% include 'template/layout/footer.phtml' %}
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

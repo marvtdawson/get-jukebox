@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+{% include 'template/layout/pagehead.phtml' %}
+<body>
+   <div class="container-fluid page-content-wrapper">
+
+       <!-- START HEADER CONTAINER -->
+       <div class="row">
+           <div class="mast-head-wrapper" >
+               {% include 'template/layout/header.phtml' %}
+           </div>
+       </div>
+       <!-- #end Header wrapper -->
+
+       <!--Start Main Content Wrapper -->
+       <div class="row">
+           {% block maincontent %}
+           {% endblock %}
+       </div>
+
+       <!-- Push the footer to bottom of page -->
+       <div class="row">
+            <div class="push_footer_down"></div>
+       </div>
+
+
+   </div>
+
+</body>
+</html>
